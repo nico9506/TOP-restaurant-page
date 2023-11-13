@@ -1,0 +1,1 @@
+Assignment from the React Path (The Odin Project) - Course Intermediate Javascript

@@ -1,0 +1,19 @@
+{
+  "name": "top-restaurant-page",
+  "version": "1.0.0",
+  "description": "Assignment from the React Path (The Odin Project) - Course Intermediate Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "odin",
+    "webpack"
+  ],
+  "author": "Nicolas Lopez",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
