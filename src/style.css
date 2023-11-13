@@ -42,6 +42,28 @@ nav {
     font-size: var(--fs-navbar);
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav > .logo {
+    font-size: var(--fs-logo);
+    color: var(--ct-vibrant);
+    font-weight: bolder;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    font-weight: bold;
+}
+
+nav > ul > li:hover {
+    color: var(--ct-vibrant);
+    cursor: pointer;
 }
 /* //--------------------------------------------------------------// */
 /* //--------------------------------------------------------------// */
@@ -65,7 +87,22 @@ nav {
 footer {
     grid-area: footer;
     height: 100%;
-    background-color: var(--ct-vibrant);
+    background-color: var(--ct-darker);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > .githubLink {
+    font-size: var(--fs-logo);
+    font-weight: bold;
+    color: var(--ct-dark);
+    text-decoration: none;
+}
+
+footer > .githubLink:hover {
+    color: var(--ct-vibrant);
+    cursor: pointer;
 }
 /* //--------------------------------------------------------------// */
 /* //--------------------------------------------------------------// */
