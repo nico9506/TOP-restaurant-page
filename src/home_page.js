@@ -13,8 +13,6 @@ export default function createHomePage() {
 
     //Appends the footer
     MainContainer.appendChild(createFooter());
-
-    return ;
 }
 
 function createNavbar() {
@@ -36,7 +34,7 @@ function createNavbar() {
     navbar.appendChild(menu);
 
     //menu items generated from the following array
-    const items = ['Home', 'Menu', 'Contact us'];
+    const items = ['Welcome', 'Menu', 'Contact us'];
     for (let i = 0; i < items.length; i++) {
         menu.appendChild(createLiItems(items[i]));   
     }
@@ -50,7 +48,7 @@ function createLiItems(label) {
      */
 
     const li = document.createElement('li');
-    // li.setAttribute('class', 'item');
+    li.setAttribute('id', label.slice(0, 4).toLowerCase());
 
     li.innerHTML += label;
 
@@ -64,14 +62,7 @@ function createMainContent() {
 
     const main = document.createElement('div');
     main.classList.add('main-content');
-
-    const mainHeader = document.createElement('h1');
-    mainHeader.textContent = "Welcome to FatMates!";
-    main.appendChild(mainHeader);
-
-    const mainText = document.createElement('p');
-    mainText.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eveniet maiores, deleniti laboriosam necessitatibus velit earum neque sint perferendis? Quod ipsa illum ducimus quidem expedita ullam velit aliquam facere totam?";
-    main.appendChild(mainText);
+    main.setAttribute("id", "main-content");
 
     return main;
 }

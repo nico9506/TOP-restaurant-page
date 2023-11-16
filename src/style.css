@@ -72,13 +72,32 @@ nav > ul > li:hover {
     grid-area: main-content;
     background-color: var(--ct-lighter);
     min-height: 100vh;
+    padding: 1rem;
+    background: no-repeat center url("./assets/pexels-valeria-boltneva-1639565.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
 }
 
-.main-content > h1 {
+.content-frame {
+    width: max(80%, 40rem);
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px 2px var(--ct-darker);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.content-frame > h1 {
     font-size: var(--fs-headers);
+    text-align: center;
 }
 
-.main-content > p {
+.content-frame > p {
     font-size: var(--fs-content);
 }
 /* //--------------------------------------------------------------// */
