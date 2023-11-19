@@ -3,7 +3,9 @@ export default function createHomePage() {
      * Creates the home page elements and adds them to the 'content' (class) tag
      */
 
-    let MainContainer = document.getElementsByClassName('content')[0];
+    const MainContainer = document.createElement('div');
+    MainContainer.classList.add('content');
+    document.body.appendChild(MainContainer);
 
     //Appends the navbar
     MainContainer.appendChild(createNavbar());

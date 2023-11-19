@@ -4,31 +4,33 @@
     --ct-vibrant: gold;
     --ct-light: lightgrey;
     --ct-lighter: lightblue;
+    --ct-dark-crystal: rgba(0, 0, 0, 0.75);
 
     --navbar-height: 3rem;
     --footer-height: 4rem;
     /* --navbar-height: 5rem; */
 
-    --fs-navbar: 1.2rem;
-    --fs-logo: 1.4rem;
-    --fs-headers: 2rem;
-    --fs-subheader: 1.6rem; 
-    --fs-content: 1rem;
+    --fs-navbar: 0.9rem;
+    --fs-logo: 1.2rem;
+    --fs-headers: 1.8rem;
+    --fs-subheader: 1.4rem;
+    --fs-content: 0.9rem;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .content {
     display: grid;
     grid-template: var(--navbar-height) 1fr var(--footer-height) / 1fr;
-    grid-template-areas: 
-    'nav-bar'
-    'main-content'
-    'footer';
+    grid-template-areas:
+        "nav-bar"
+        "main-content"
+        "footer";
 }
 /* //--------------------------------------------------------------// */
 /* //--------------------------------------------------------------// */
@@ -73,32 +75,46 @@ nav > ul > li:hover {
     background-color: var(--ct-lighter);
     min-height: 100vh;
     padding: 1rem;
-    background: no-repeat center url("./assets/pexels-valeria-boltneva-1639565.jpg");
+    background: no-repeat center
+        url("./assets/pexels-valeria-boltneva-1639565.jpg");
     background-size: cover;
     display: flex;
     justify-content: center;
 }
 
 .content-frame {
-    width: max(80%, 40rem);
+    width: 60%;
     height: fit-content;
-    background-color: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 2px 2px var(--ct-darker);
+    background-color: var(--ct-dark-crystal);
+    box-shadow: 0 0 2px 2px var(--ct-dark-crystal);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     padding: 1rem;
     gap: 1rem;
+    color: var(--ct-light);
 }
 
 .content-frame > h1 {
     font-size: var(--fs-headers);
     text-align: center;
+    font-style: italic;
 }
 
 .content-frame > p {
     font-size: var(--fs-content);
+}
+
+.content-frame > img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+
+.content-frame > video {
+    width: 100%;
+    border-radius: 3px;
 }
 /* //--------------------------------------------------------------// */
 /* //--------------------------------------------------------------// */
@@ -126,3 +142,62 @@ footer > .githubLink:hover {
 /* //--------------------------------------------------------------// */
 /* //--------------------------------------------------------------// */
 /* //--------------------------------------------------------------// */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .main-content {
+        padding: 1rem 5px;
+    }
+
+    .content-frame {
+        width: 95%;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    :root {
+        --fs-navbar: 1rem;
+        --fs-logo: 1.4rem;
+        --fs-headers: 1.9rem;
+        --fs-subheader: 1.5rem;
+        --fs-content: 1rem;
+    }
+
+    .main-content {
+        padding: 1rem 10px;
+    }
+
+    .content-frame {
+        width: 90%;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    :root {
+        --fs-navbar: 1.1rem;
+        --fs-logo: 1.6rem;
+        --fs-headers: 2rem;
+        --fs-subheader: 1.6rem;
+        --fs-content: 1rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .content-frame {
+        width: 80%;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {  
+    .content-frame {
+        width: 70%;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {  
+    .content-frame {
+        width: 50%;
+    }
+}
