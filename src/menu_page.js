@@ -1,5 +1,8 @@
 import kangaroo_b from './assets/pexels-rajesh-tp-1600727.jpg';
 import beef_b from './assets/pexels-valeria-boltneva-1199960.jpg';
+import chicken_b from './assets/pexels-giuseppe-cognata-13658574.jpg';
+import marg_p from './assets/pexels-engin-akyurt-2619970.jpg';
+import meat_p from './assets/pexels-brett-jordan-825661.jpg';
 
 export default function generateMenuContainer() {
     /**
@@ -21,11 +24,29 @@ export default function generateMenuContainer() {
 
     const mi_beef_b = new MenuItem('Beef Burger', beef_b, "Classic and satisfying dish that features a juicy and flavourful patty made from ground beef, sandwiched between two soft buns. You can customize your beef burger with various toppings and sauces, such as cheese, lettuce, tomato, onion, bacon, ketchup, mustard, mayonnaise, and more.", 'burger');
 
+    const mi_chicken_b = new MenuItem('Crispy Chicken', chicken_b, "Tasty and healthy alternative to a beef burger, that features a tender and crispy patty made from chicken breast, coated with breadcrumbs and spices, and fried or baked to perfection.", 'burger');
+
+
+    ////////////////////////////// SECTION 2 //////////////////////////////////
+    const section_2 = document.createElement('h1');
+    section_2.classList.add('menu-section');
+    section_2.textContent = "Pizza";
+
+    //---------------- item objects -------------//
+    const mi_marg_p = new MenuItem('Margherita', marg_p, "Margherita pizza is a simple and delicious pizza that features a thin and crispy crust, topped with tomato sauce, fresh mozzarella cheese, and basil leaves.", 'pizza');
+
+    const mi_meat_lov_p = new MenuItem('Meat Lovers', meat_p, "This pizza is loaded with pepperoni, ham, bacon, sausage, and beef, along with mozzarella cheese and tomato sauce. It is a classic option for meat enthusiasts who want to try a bit of everything.", 'pizza');
+
+
     container.appendChild(section_1);
     container.appendChild(createMenuItem(mi_kangaroo_b));
     container.appendChild(createMenuItem(mi_beef_b));
+    container.appendChild(createMenuItem(mi_chicken_b));
 
-    
+    container.appendChild(section_2);
+    container.appendChild(createMenuItem(mi_marg_p));
+    container.appendChild(createMenuItem(mi_meat_lov_p));
+
     return container;
 }
 

@@ -160,6 +160,10 @@ footer > .githubLink {
     text-decoration: none;
 }
 
+footer > .githubLink > a > img {
+    height: var(--fs-subheader);
+}
+
 footer > .githubLink:hover {
     color: var(--ct-vibrant);
     cursor: pointer;

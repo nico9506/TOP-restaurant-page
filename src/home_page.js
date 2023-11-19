@@ -1,3 +1,5 @@
+import github_icon from './assets/github.svg';
+
 export default function createHomePage() {
     /**
      * Creates the home page elements and adds them to the 'content' (class) tag
@@ -80,7 +82,7 @@ function createFooter() {
     githubProfileLink.setAttribute('href', 'https://github.com/nico9506/TOP-restaurant-page');
     githubProfileLink.setAttribute('target', '_blank');
     githubProfileLink.classList.add('githubLink');
-    githubProfileLink.innerHTML = "ICON nico9506";
+    githubProfileLink.innerHTML = `<a><img src=${github_icon}></img> nico9506</a>`;
     footer.appendChild(githubProfileLink);
     
     // const githubLogo = document.createElement('div');
