@@ -116,6 +116,31 @@ nav > ul > li:hover {
     width: 100%;
     border-radius: 3px;
 }
+
+.content-frame > .menu-item-container {
+    width: 90%;
+    padding: 1rem;
+    background-color: var(--ct-light);
+    color: var(--ct-darker);
+    border-radius: 3px;
+    box-shadow: 0 0 1px 1px var(--ct-dark);
+}
+
+.content-frame > .menu-item-container > .menu-item-name {
+    text-align: center;
+    font-size: var(--fs-subheader);
+}
+
+.content-frame > .menu-item-container > img {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.content-frame > .menu-item-container > .menu-item-desc {
+    text-align: center;
+    font-style: italic;
+    font-size: var(--fs-content);
+}
 /* //--------------------------------------------------------------// */
 /* //--------------------------------------------------------------// */
 /* //--------------------------------------------------------------// */

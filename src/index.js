@@ -1,6 +1,7 @@
 import "./style.css";
 import createHomePage from "./home_page.js";
 import generateWelcomeContainer from "./welcome_page.js";
+import generateMenuContainer from "./menu_page.js";
 
 const addPageControls = () => {
     /**
@@ -32,7 +33,9 @@ const cleanAndGenerateContent = (e) => {
             break;
 
         case "menu":
-            console.log("id: menu; from: index.js");
+            document
+                .getElementById("main-content")
+                .appendChild(generateMenuContainer());
             break;
 
         case "cont":
