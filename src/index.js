@@ -47,8 +47,19 @@ const cleanAndGenerateContent = (e) => {
     }
 };
 
-//Generates the webpage
-createHomePage();
+(() => {
+    /**
+     * IIFE to start running the webpage
+     */
 
-// Add eventlistener to the navbar
-addPageControls();
+    //Generates the webpage
+    createHomePage();
+
+    // Add eventlistener to the navbar
+    addPageControls();
+
+    //Generates the WelcomePage by default
+    document
+        .getElementById("main-content")
+        .appendChild(generateWelcomeContainer());
+})();
