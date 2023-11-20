@@ -6,6 +6,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: "FlatMates Project",
+            favicon: "src/assets/favicon.ico",
         }),
     ],
     devtool: "inline-source-map",
