@@ -2,6 +2,7 @@ import "./style.css";
 import createHomePage from "./home_page.js";
 import generateWelcomeContainer from "./welcome_page.js";
 import generateMenuContainer from "./menu_page.js";
+import generateContactUsContainer from "./contact_us.js";
 
 const addPageControls = () => {
     /**
@@ -39,7 +40,9 @@ const cleanAndGenerateContent = (e) => {
             break;
 
         case "cont":
-            console.log("id: cont; from: index.js");
+            document
+                .getElementById("main-content")
+                .appendChild(generateContactUsContainer());
             break;
 
         default:
