@@ -7,6 +7,7 @@ export default function generateWelcomeContainer() {
      * To be Linked to the navbar Welcome button.
      * Returns the "content-frame" element
      */
+
     const container = document.createElement('div');
     container.classList.add("content-frame");
     container.setAttribute('id', 'content-frame');

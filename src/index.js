@@ -26,6 +26,8 @@ const cleanAndGenerateContent = (e) => {
         console.log("No CONTENT-FRAME element");
     }
 
+    window.scrollTo(0, 0);
+
     switch (e.target.id) {
         case "welc":
             document

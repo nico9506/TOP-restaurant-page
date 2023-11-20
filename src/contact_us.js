@@ -1,3 +1,8 @@
+import pinterest from './assets/pinterest.svg';
+import facebook from './assets/facebook.svg';
+import twitter from './assets/twitter.svg';
+import instagram from './assets/instagram.svg';
+
 export default function generateContactUsContainer() {
     /**
      * Creates the Contact Us container to display de Welcoming section
@@ -12,7 +17,7 @@ export default function generateContactUsContainer() {
     title.textContent = "Contact Us";
 
     const subtitle = document.createElement('h2');
-    title.textContent = "How to get in touch?";
+    subtitle.textContent = "How to get in touch?";
     
     const contactText_1 = document.createElement('p');
     contactText_1.textContent = "If you have any questions, feedback, or suggestions, we’d love to hear from you. You can contact us by phone, email, or social media.";
@@ -56,18 +61,34 @@ export default function generateContactUsContainer() {
 
     const value_3 = document.createElement('p');
     value_3.classList.add('contact-value');
-    value_3.textContent = "contact@fatmates.com.au";
+    value_3.innerHTML = "<a href='mailto:void'>contact@fatmates.com.au</a>";
 
     const header_4 = document.createElement('h3');
     header_4.classList.add('contact-header');
     header_4.textContent = 'follow us';
 
-    const value_4 = document.createElement('p');
-    value_4.classList.add('contact-value');
-    value_4.textContent = "--------- ICONS --------";
+    const value_4 = document.createElement('div');
+    value_4.classList.add('icons');
+    
+    const pinterest_icon = new Image();
+    pinterest_icon.src = pinterest;
+    value_4.appendChild(pinterest_icon);
+
+    const facebook_icon = new Image();
+    facebook_icon.src = facebook;
+    value_4.appendChild(facebook_icon);
+
+    const twitter_icon = new Image();
+    twitter_icon.src = twitter;
+    value_4.appendChild(twitter_icon);
+
+    const instagram_icon = new Image();
+    instagram_icon.src = instagram;
+    value_4.appendChild(instagram_icon);
 
     container.appendChild(title);
     container.appendChild(subtitle);
+    container.appendChild(contactText_1);
     container.appendChild(contact_us_form);
     container.appendChild(btnForm);
     container.appendChild(header_1);
